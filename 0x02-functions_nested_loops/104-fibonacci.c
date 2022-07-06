@@ -10,7 +10,7 @@ int main(void)
 	int i = 0;
 	long n, j = 1, k = 0;
 
-	for (; i < 101; i++)
+	for (; i < 99; i++)
 	{
 		if (i <= 1)
 			n = i;
