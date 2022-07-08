@@ -11,7 +11,7 @@ int lagest_number(int a,int b, int c)
 {
 	int largest;
 
-	if(a >=b && a >= c)
+	if(a >= b && a >= c)
 	{
 		largest = a;
 	}
@@ -24,19 +24,4 @@ int lagest_number(int a,int b, int c)
 		largest = c;
 	}
 	return (largest);
-}
-int main(void)
-{
-	int a, b, c;
-	int largest;
-
-	a = 972;
-	b = -98;
-	c = 0;
-	
-	largest = lagest_number(a, b, c);
-
-	printf("%d is the lagest number \n",largest);
-	
-	return (0);
 }
