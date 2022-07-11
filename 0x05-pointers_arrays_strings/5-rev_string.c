@@ -4,8 +4,8 @@
 /**
  * rev_string - Reverse a string
  * *@s: the string
- *
- * Return: 
+ * 
+ * Return: void
  */
 void rev_string(char *s)
 {
@@ -17,7 +17,7 @@ void rev_string(char *s)
 	for (i = 0 ; i < c / 2; i++)
 	{
 		alx = s[i];
-		s[i] = s[c - i -1];
+		s[i] = s[c - i - 1];
 		s[c - i - 1] = alx;
 	}
 }
