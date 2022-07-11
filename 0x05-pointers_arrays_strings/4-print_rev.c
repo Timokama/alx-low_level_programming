@@ -3,7 +3,7 @@
 
 /**
  * print_rev - prints a reverse of a string
- * @s: The string to print 
+ * @s: The string to print
  *
  * Return: reverse
  */
@@ -19,5 +19,5 @@ void print_rev(char *s)
 	{
 		_putchar(s[i]);
 	}
-	_putchar(s[i]);
+	_putchar('\n');
 }
