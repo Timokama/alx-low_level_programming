@@ -15,10 +15,11 @@ void randomPasswordGeneration(int N)
            
       	int randomizer = 0;
   	srand((unsigned int)(time(NULL)));
-        int  numbers[] = "0123456789";
+        char  numbers[] = "0123456789";
         char letter[] = "abcdefghijklmnoqprstuvwyzx";                            
         char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYZX";
 	char symbols[] = "!@#$^&*?";
+	char crackme[] = "Tada! Congrats";
  	char password[N];
 
  	randomizer = rand() % 4;
@@ -42,6 +43,12 @@ void randomPasswordGeneration(int N)
                		randomizer = rand() % 4;
               		printf("%c", password[i]);
         	}
+		else if (randomizer == 4)
+		{
+			password[i] = crackme[rand() % 14];
+			randomizer = rand() % 4;
+			printf("%c", password[i]);
+		}
 		else
 		{
 			password[i] = letter[rand() % 26];
@@ -58,7 +65,7 @@ void randomPasswordGeneration(int N)
  */
 int main()
 {
-   	int N = 14;
+   	int N = 0;
 	
 	randomPasswordGeneration(N);
 	return 0;
