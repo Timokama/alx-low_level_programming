@@ -9,8 +9,9 @@
   */
 char *_strcat(char *dest, char *src)
 {
-	int alx = 0, a = 0;
-	
+	int alx, a;
+
+	alx = a = 0;	
 	while (*(dest + alx))
 	{
 		alx++;
@@ -20,6 +21,5 @@ char *_strcat(char *dest, char *src)
 		alx++;
 		a++;
 	}
-	dest[alx] = '\0';
 	return (dest);
 }
