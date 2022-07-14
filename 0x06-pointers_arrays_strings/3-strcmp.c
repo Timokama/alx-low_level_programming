@@ -4,7 +4,6 @@
  * _strcmp - compare two strings
  * @s1: The first string
  * @s2: The second string
- *
  * Return: int value
  */
 int _strcmp(char *s1, char *s2)
@@ -15,7 +14,6 @@ int _strcmp(char *s1, char *s2)
 	{
 		m++;
 	}
-
 	while (s2[n])
 	{
 		n++;
@@ -28,10 +26,9 @@ int _strcmp(char *s1, char *s2)
 	{
 		k = n;
 	}
-
 	while (o <= k)
 	{
-		if (s1[o] == s2[0])
+		if (s1[o] == s2[o])
 		{
 			o++;
 			continue;

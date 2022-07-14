@@ -1,26 +1,26 @@
 #include "main.h"
 
 /**
- * root13 - ..
- * @p: ..
- * Return: ...
+ * root13 - encode a string into rot13
+ * @p: string to encode
+ * Return: Address of p
  */
 char *rot13(char *p)
 {
-	int a = 0;
-	
-	while (p[a])
+	int i, j;
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+	for (i = 0; *(p + i); i++)
 	{
-		while ((p[a] >= 'a' && p[a] <= 'z') || (p[a] >= 'A' &&p[a] <= 'Z'))
+		for (j = 0; j < 52; j++)
 		{
-			if ((p[a] > 'm' && p[a] <= 'z') || (p[a] > 'M' && p[a] <= 'Z'))
+			if (a[j] == *(p + i))
 			{
-				p[a] -= 13;
+				*(p + i) = b[j];
 				break;
 			}
-			p[a] += 13;
 		}
-		a++;
 	}
 	return (p);
 }

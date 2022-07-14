@@ -4,18 +4,16 @@
   *_strcat - concatenate two strings
   * @dest: The destination string
   * @scr: The source string
-  *
   * Return: A pointer to the resulting string dest
   */
 char *_strcat(char *dest, char *src)
 {
 	int alx = 0, a;
-
+	
 	while (dest[alx])
 	{
 		alx++;
 	}
-
 	for (a = 0; src[a] != 0; a++)
 	{
 		dest[alx] = src[a];
