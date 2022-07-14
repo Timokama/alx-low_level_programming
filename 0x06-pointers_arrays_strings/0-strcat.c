@@ -15,11 +15,11 @@ char *_strcat(char *dest, char *src)
 	{
 		alx++;
 	}
-
 	while ((*(dest + alx) = *(src + a)))
 	{
 		alx++;
 		a++;
 	}
+	dest[alx] = '\0';
 	return (dest);
 }
