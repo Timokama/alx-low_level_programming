@@ -19,8 +19,7 @@ char *_strpbrk(char *s, char *accept)
 				break;
 		}
 		if (accept[y])
-			s += x;
-			return (s);
+			return (s + x);
 	}
-	return (0);
+	return ('\0');
 }
