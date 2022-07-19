@@ -25,7 +25,7 @@ int checker(int i, int n)
 {
 	if (n < 2 || n % i == 0)
 		return (0);
-	else if ((n > i) / 2)
+	else if (i > n / 2)
 		return (1);
 	else
 		return (checker(i + 1, n));
