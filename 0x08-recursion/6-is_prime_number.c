@@ -21,12 +21,12 @@ int is_prime_number(int n)
  *
  * Return: 1 if prime, 0 if not
  */
-int checker(int n, int i)
+int checker(int i, int n)
 {
 	if (n < 2 || n % i == 0)
 		return (0);
 	else if ((n > i) / 2)
 		return (1);
 	else
-		return (checker(n, i + 1));
+		return (checker(i + 1, n));
 }
