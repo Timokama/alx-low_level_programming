@@ -1,4 +1,5 @@
 #include "main.h"
+str
 /**
  * is_palindrome - states if a string is a palindrome
  * @s: string to check
@@ -24,7 +25,7 @@ int _strlen(char *str)
 	if (*str == '\0')
 		return (0);
 	else
-		return (1 + _strlen(str +1));
+		return (1 + _strlen(str + 1));
 }
 
 /**
@@ -38,7 +39,7 @@ int _strlen(char *str)
 int check(int l, int r, char *p)
 {
 	if (l >= r)
-		return (0);
+		return (1);
 	else if (p[l] != p[r])
 		return (0);
 	else
