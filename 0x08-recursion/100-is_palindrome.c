@@ -5,6 +5,7 @@
  *
  * Return: 1 if palindrome, 0 if not
  */
+int is_palindrome(char *s)
 {
 	int i;
 
