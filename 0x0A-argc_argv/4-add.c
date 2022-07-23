@@ -7,7 +7,6 @@
  * main - print the addition of two positive numbers
  * @argc: argument count
  * @argv: argumrnt vector
- *
  * Return: 1nfor less of 2 argument or void numbers, 0 success
  */
 int main(int argc, char *argv[])

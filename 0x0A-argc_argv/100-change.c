@@ -6,7 +6,6 @@
  * main - return the min number of coins per given amount of money
  * @argc: argument count
  * @argv: argument vector
- *
  * Return: 0 success 1 fail
  */
 int main(int argc, char *argv[])
