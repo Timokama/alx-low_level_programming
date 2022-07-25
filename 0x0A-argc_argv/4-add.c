@@ -9,7 +9,7 @@
  * @argv: argumrnt vector
  * Return: 1nfor less of 2 argument or void numbers, 0 success
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int sum, i, j;
 
@@ -27,5 +27,5 @@ int main(int argc, char *argv[])
 		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
-	return(0);
+	return (0);
 }
