@@ -12,9 +12,10 @@ char *argstostr(int ac, char **av)
 {
 	int j;
 	char **avr;
+
 	if (ac <= 0)
 		return (NULL);
-	avr = malloc((ac) * sizeof(char *));
+	avr = malloc((ac) * sizeof(char));
 	if (avr == NULL)
 	{
 		free(avr);
