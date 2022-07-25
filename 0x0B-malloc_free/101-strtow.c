@@ -101,6 +101,6 @@ char **strtow(char *str)
 			i++;
 		}
 	}
-	*(words + numWords) = NULL;
+	words[numWords] = NULL;
 	return (words);
 }
