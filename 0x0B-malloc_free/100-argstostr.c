@@ -11,20 +11,20 @@
 char *argstostr(int ac, char **av)
 {
 	int j;
-
+	char **avr;
 	if (ac <= 0)
 		return (NULL);
-
-	if (av == NULL)
+	avr = malloc((ac) * sizeof(char *));
+	if (avr == NULL)
 	{
-		free(av);
+		free(avr);
 		return (NULL);
 	}
 	for (j = 0; j < ac; j++)
 	{
-		printf("%s\n", av[j]);
-		(*av)++;
+		avr[j] = av[j];
+		printf("%s\n", avr[j]);
+		(*avr)++;
 	}
-	av = '\0';
-	return (*(av + j));
+	return (av[j]);
 }
