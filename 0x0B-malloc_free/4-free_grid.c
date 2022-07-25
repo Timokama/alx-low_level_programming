@@ -4,7 +4,7 @@
 /**
  * free_grid - frees the assigned memory of the matrix
  * @grid: the matrix
- * @heght:rows
+ * @height:rows
  *
  * Return: matrix
  */
