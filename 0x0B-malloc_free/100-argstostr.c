@@ -13,9 +13,9 @@ char *argstostr(int ac, char **av)
 	int j;
 	char **avr;
 
-	if (ac <= 0)
+	if (ac == 0)
 		return (NULL);
-	avr = malloc(ac * sizeof(char));
+	avr = malloc(ac * sizeof(char *));
 	if (avr == NULL)
 	{
 		free(avr);
@@ -25,7 +25,6 @@ char *argstostr(int ac, char **av)
 	{
 		avr[j] = av[j];
 		printf("%s\n", avr[j]);
-		(*avr)++;
 	}
 	return (av[j]);
 }
