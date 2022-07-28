@@ -63,16 +63,16 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 int main(int argc, char **argv)
 {
 	int i, j, carry, len, len_s1 = 0, len_s2 = 0;
-	char *s1 = argv[1], *s2 = argv[2];
+	char *s1 = *(argv + 1), *s2 = *(argv + 2);
 	int *a, *b, *ans;
 
 	if (argc != 3 || allDigits(argv) != 1)
 		Error();
 	if (*s1 == '0' || *s2 == '0')
 		_putchar('0');
-	while (argv[1][len_s1])
+	while (*(*(argv + 1) + len_s1))
 		len_s1++;
-	while (argv[2][len_s2])
+	while (*(*(argv + 2) + len_s2))
 		len_s2++;
 	len = len_s1 + len_s2 + 1;
 	a = (int *) malloc(len_s1 * sizeof(int));
@@ -90,7 +90,8 @@ int main(int argc, char **argv)
 	for (i = 0; i < len_s1 + len_s2; i++)
 	{
 		carry = ans[i] / 10, ans[i] = ans[i] % 10;
-		ans[i + 1] = ans[i + 1] + carry; }
+		ans[i + 1] = ans[i + 1] + carry;
+	}
 	for (i = len_s1 + len_s2; i >= 0; i--)
 		if (ans[i] > 0)
 			break;
