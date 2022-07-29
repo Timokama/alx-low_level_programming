@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * Errorv - prints Error str
+ * Error - prints Error str
  *
  * Return: Error and new line.
  */
@@ -24,6 +24,7 @@ void Error(void)
 int allDigits(char **arg)
 {
 	int i, j;
+
 	for (i = 1; i <= 2; i++)
 	{
 		for (j = 0; arg[i][j]; j++)
@@ -55,10 +56,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	return (newArray);
 }
 /**
- * _calloc- initializes memory spaces with zero.
- * @nmemb: string 1.
- * @size: string 2, concatenated to 1
- * Return: pointer to the concatenated string.
+ * main - multiplies 2 positive numbers.
+ * @argc: counter of arguments.
+ * @argv: vector of arguments
+ * Return: ans or Error.
  */
 int main(int argc, char **argv)
 {
@@ -81,17 +82,16 @@ int main(int argc, char **argv)
 	if (a == NULL || b == NULL || ans == NULL)
 		Error();
 	for (i = len_s1 - 1, j = 0; i >= 0; i--, j++)
-		a[j] = s2[i] - '0';
+		*(a + j) = *(s2 + i) - '0';
 	for (i = len_s2 - 1, j = 0; i >= 0; i--, j++)
-		b[j] = s2[i] - '0';
+		*(b + j) = *(s2 + i) - '0';
 	for (i = 0; i < len_s2; i++)
 		for (j = 0; j < len_s1; j++)
-			ans[i + j] = ans[i + j] + b[i] * a[j];
+			*(ans + i + j) = *(ans + i + j) + b[i] * a[j];
 	for (i = 0; i < len_s1 + len_s2; i++)
 	{
 		carry = ans[i] / 10, ans[i] = ans[i] % 10;
-		ans[i + 1] = ans[i + 1] + carry;
-	}
+		*(ans + i + 1) = *(ans + i + 1) + carry; }
 	for (i = len_s1 + len_s2; i >= 0; i--)
 		if (ans[i] > 0)
 			break;
