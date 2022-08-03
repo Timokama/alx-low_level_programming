@@ -33,6 +33,6 @@ int main(int argc, char **argv)
 	a = atoi(*(argv + 1));
 	b = atoi(*(argv + 3));
 	answer = function(a, b);
-	printf("%d\n",answer);
+	printf("%d\n", answer);
 	return (0);
 }
