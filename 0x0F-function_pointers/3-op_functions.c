@@ -43,8 +43,7 @@ int op_div(int a, int b)
 		puts("Error");
 		exit(100);
 	}
-	else
-		return (a / b);
+	return (a / b);
 }
 /**
  * op_mod - obteins the module between two number.
