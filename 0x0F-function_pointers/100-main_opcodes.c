@@ -9,6 +9,7 @@
 int main(int argc, char **argv)
 {
 	int i, num;
+	
 	if (argc != 2)
 	{
 		printf("Error\n");
