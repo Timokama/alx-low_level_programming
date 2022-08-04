@@ -6,8 +6,7 @@
  * @argc: argument counter.
  * @argv: argument vector.
  * Return: result, otherwise 98 for arg error, 99 for
- * op, error 100 for divide
- * or multiply by 0
+ * op, error 100 for divide or multiply by 0
  */
 int main(int argc, char **argv)
 {
