@@ -6,7 +6,7 @@
  */
 void free_list(list_t *head)
 {
-	list_t *current_node, *next_node;	
+	list_t *current_node, *next_node;
 	current_node = head;
 	while (current_node != NULL)
 	{
