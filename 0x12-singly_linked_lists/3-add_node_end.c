@@ -16,7 +16,7 @@ int _strlen(const char *s)
  * add_node_end - adds a node at the end of a list
  * @head: current head address
  * @str: pointer to string
- * @return: number of nodes
+ * Return: number of nodes
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
