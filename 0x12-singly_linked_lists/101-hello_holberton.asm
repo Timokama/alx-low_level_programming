@@ -1,6 +1,5 @@
 section .data
 	message dp "Hello, Holberton", 10
-
 section .text
 
 global main
