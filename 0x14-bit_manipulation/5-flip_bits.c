@@ -7,18 +7,16 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int bit_diff, mask = 0;
-	int i = 63, digit;
-	unsigned int differences = 0;
+	unsigned long int bit_diff, mask = 1;
+	unsigned int count = 0, i = 0;
 
 	bit_diff = n ^ m;
-	while (i >= 0)
+	while ( i < (sizeof(unsigned long int) * 8))
 	{
-		mask = 1 << i;
-		digit = (bit_diff & mask) >> i;
-		if (digit == 1)
-			differences++;
-		i--;
+		if (mask == (bit_diff & mask))
+			count++;
+		mask <<= 1;
+		i++;
 	}
-	return (differences);
+	return (count);
 }
