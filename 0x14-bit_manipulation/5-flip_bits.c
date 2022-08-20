@@ -11,12 +11,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int count = 0, i = 0;
 
 	bit_diff = n ^ m;
-	while ( i < (sizeof(unsigned long int) * 8))
+	for (; i < (sizeof(unsigned long int) * 8); i++)
 	{
 		if (mask == (bit_diff & mask))
 			count++;
 		mask <<= 1;
-		i++;
 	}
 	return (count);
 }
