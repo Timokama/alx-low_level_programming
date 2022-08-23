@@ -13,9 +13,10 @@ size_t _strlen(char *str)
 	return (i);
 }
 /**
- * _strlen - finds the length of a string
- * @str: pointer to the string
- * Return: length of the string
+ * create_file - creates a file
+ * @filename: name of file to be readed
+ * @text_content: the text inside the file.
+ * Return: 2 success, otherwise 0
  */
 int create_file(const char *filename, char *text_content)
 {
