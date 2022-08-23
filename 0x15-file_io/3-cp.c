@@ -4,7 +4,6 @@
 /**
  * check97 - checks for the correct number of arguments
  * @argc: number of arguments
- *
  * Return: void
  */
  void check97(int argc)
