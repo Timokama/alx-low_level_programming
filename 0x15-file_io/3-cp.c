@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * check97 - checks for the correct number of arguments
  * @argc: number of arguments
@@ -95,11 +97,10 @@ int main(int argc, char *argv[])
 	{
 		lenr = read(fd_from, buffer, 1024);
 		check98(lenr, argv[1], fd_from, fd_to);
-	
 		lenw = write(fd_to, buffer, lenr);
 		if (lenw != lenr)
 			lenw = -1;
-			check99(lenw, argv[2], fd_from, fd_to);
+		check99(lenw, argv[2], fd_from, fd_to);
 	}
 	close_to = close(fd_to);
 	close_from = close(fd_from);
