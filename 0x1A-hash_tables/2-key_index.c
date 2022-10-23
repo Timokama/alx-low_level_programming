@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-
 /**
  * key_index - Associate a index to a key
  * @key: key to be indexed.
